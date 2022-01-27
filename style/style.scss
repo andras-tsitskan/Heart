@@ -1,5 +1,8 @@
 $heartColor: red;
 $heartHeight: 30vh;
+$heartDadHeight: 30vh;
+$heartMomHeight: 25vh;
+$heartBabyHeight: 10vh;
 
 html, body {
     height: 100%;
@@ -10,13 +13,11 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: lightcoral;
+    background: lightcoral;
 }
 
 .heart {
     background: $heartColor;
-    height: $heartHeight;
-    width: $heartHeight;
     transform: rotate(-45deg);
 
     &::before {
@@ -26,7 +27,6 @@ body {
         background: inherit;
         height: inherit;
         width: inherit;
-        top: -0.5 * $heartHeight;
         border-radius: 50%;
     }
 
@@ -37,8 +37,52 @@ body {
         background: inherit;
         height: inherit;
         width: inherit;
-        top: -$heartHeight;
-        right: -0.5 * $heartHeight;
         border-radius: 50%;
+    }
+}
+
+.dad {
+    height: $heartDadHeight;
+    width: $heartDadHeight;
+
+    &::before {
+        top: -0.5 * $heartDadHeight;
+    }
+
+    &::after {
+        content: "";
+        top: -$heartDadHeight;
+        right: -0.5 * $heartDadHeight;
+    }
+}
+
+.mom {
+    height: $heartMomHeight;
+    width: $heartMomHeight;
+
+    &::before {
+        top: -0.5 * $heartMomHeight;
+    }
+
+    &::after {
+        content: "";
+        top: -$heartMomHeight;
+        right: -0.5 * $heartMomHeight;
+    }
+}
+
+.baby {
+    height: $heartBabyHeight;
+    width: $heartBabyHeight;
+    margin: 0 (0.5 * $heartDadHeight);
+
+    &::before {
+        top: -0.5 * $heartBabyHeight;
+    }
+
+    &::after {
+        content: "";
+        top: -$heartBabyHeight;
+        right: -0.5 * $heartBabyHeight;
     }
 }

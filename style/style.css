@@ -13,13 +13,11 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background-color: lightcoral;
+  background: lightcoral;
 }
 
 .heart {
   background: red;
-  height: 30vh;
-  width: 30vh;
   -webkit-transform: rotate(-45deg);
           transform: rotate(-45deg);
 }
@@ -31,7 +29,6 @@ body {
   background: inherit;
   height: inherit;
   width: inherit;
-  top: -15vh;
   border-radius: 50%;
 }
 
@@ -42,8 +39,52 @@ body {
   background: inherit;
   height: inherit;
   width: inherit;
+  border-radius: 50%;
+}
+
+.dad {
+  height: 30vh;
+  width: 30vh;
+}
+
+.dad::before {
+  top: -15vh;
+}
+
+.dad::after {
+  content: "";
   top: -30vh;
   right: -15vh;
-  border-radius: 50%;
+}
+
+.mom {
+  height: 25vh;
+  width: 25vh;
+}
+
+.mom::before {
+  top: -12.5vh;
+}
+
+.mom::after {
+  content: "";
+  top: -25vh;
+  right: -12.5vh;
+}
+
+.baby {
+  height: 10vh;
+  width: 10vh;
+  margin: 0 15vh;
+}
+
+.baby::before {
+  top: -5vh;
+}
+
+.baby::after {
+  content: "";
+  top: -10vh;
+  right: -5vh;
 }
 /*# sourceMappingURL=style.css.map */
