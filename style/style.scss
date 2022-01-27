@@ -1,7 +1,3 @@
-// :root {
-//     --heart-color: lightcoral;
-// }
-
 $heartColor: red;
 $heartHeight: 30vh;
 
@@ -18,12 +14,10 @@ body {
 }
 
 .heart {
-    // width: 100px;
-    // height: 100px;
     background: $heartColor;
     height: $heartHeight;
     width: $heartHeight;
-    rotate: -45deg;
+    transform: rotate(-45deg);
 
     &::before {
         content: "";

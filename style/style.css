@@ -20,7 +20,8 @@ body {
   background: red;
   height: 30vh;
   width: 30vh;
-  rotate: -45deg;
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
 }
 
 .heart::before {
