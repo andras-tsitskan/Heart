@@ -1,0 +1,48 @@
+html, body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: lightcoral;
+}
+
+.heart {
+  background: red;
+  height: 30vh;
+  width: 30vh;
+  rotate: -45deg;
+}
+
+.heart::before {
+  content: "";
+  display: block;
+  position: relative;
+  background: inherit;
+  height: inherit;
+  width: inherit;
+  top: -15vh;
+  border-radius: 50%;
+}
+
+.heart::after {
+  content: "";
+  display: block;
+  position: relative;
+  background: inherit;
+  height: inherit;
+  width: inherit;
+  top: -30vh;
+  right: -15vh;
+  border-radius: 50%;
+}
+/*# sourceMappingURL=style.css.map */

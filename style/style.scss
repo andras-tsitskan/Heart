@@ -1,0 +1,50 @@
+// :root {
+//     --heart-color: lightcoral;
+// }
+
+$heartColor: red;
+$heartHeight: 30vh;
+
+html, body {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: lightcoral;
+}
+
+.heart {
+    // width: 100px;
+    // height: 100px;
+    background: $heartColor;
+    height: $heartHeight;
+    width: $heartHeight;
+    rotate: -45deg;
+
+    &::before {
+        content: "";
+        display: block;
+        position: relative;
+        background: inherit;
+        height: inherit;
+        width: inherit;
+        top: -0.5 * $heartHeight;
+        border-radius: 50%;
+    }
+
+    &::after {
+        content: "";
+        display: block;
+        position: relative;
+        background: inherit;
+        height: inherit;
+        width: inherit;
+        top: -$heartHeight;
+        right: -0.5 * $heartHeight;
+        border-radius: 50%;
+    }
+}
