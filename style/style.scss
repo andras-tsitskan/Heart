@@ -1,88 +1,121 @@
 $heartColor: red;
+$backgroundColor: hsla(0, 79%, 72%, 0.6);
 $heartHeight: 30vh;
-$heartDadHeight: 30vh;
-$heartMomHeight: 25vh;
-$heartBabyHeight: 10vh;
+$heartDadHeight: 20vw;
+$heartMomHeight: 15vw;
+$heartBabyHeight: 5vw;
 
-html, body {
-    height: 100%;
+html,
+body {
+  height: 100%;
 }
 
 body {
-    margin: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: lightcoral;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: $backgroundColor;
 }
 
 .heart {
-    background: $heartColor;
-    transform: rotate(-45deg);
+  background: $heartColor;
+  transform: rotate(-45deg);
 
-    &::before {
-        content: "";
-        display: block;
-        position: relative;
-        background: inherit;
-        height: inherit;
-        width: inherit;
-        border-radius: 50%;
-    }
+  &::before {
+    content: "";
+    display: block;
+    position: relative;
+    background: inherit;
+    height: inherit;
+    width: inherit;
+    border-radius: 50%;
+  }
 
-    &::after {
-        content: "";
-        display: block;
-        position: relative;
-        background: inherit;
-        height: inherit;
-        width: inherit;
-        border-radius: 50%;
-    }
+  &::after {
+    content: "";
+    display: block;
+    position: relative;
+    background: inherit;
+    height: inherit;
+    width: inherit;
+    border-radius: 50%;
+  }
 }
 
 .dad {
-    height: $heartDadHeight;
-    width: $heartDadHeight;
+  height: $heartDadHeight;
+  // max-height: 30vh;
+  width: $heartDadHeight;
 
-    &::before {
-        top: -0.5 * $heartDadHeight;
-    }
+  &::before {
+    top: -0.5 * $heartDadHeight;
+  }
 
-    &::after {
-        content: "";
-        top: -$heartDadHeight;
-        right: -0.5 * $heartDadHeight;
-    }
+  &::after {
+    content: "";
+    top: -$heartDadHeight;
+    right: -0.5 * $heartDadHeight;
+  }
 }
 
 .mom {
-    height: $heartMomHeight;
-    width: $heartMomHeight;
+  height: $heartMomHeight;
+  width: $heartMomHeight;
 
-    &::before {
-        top: -0.5 * $heartMomHeight;
-    }
+  &::before {
+    top: -0.5 * $heartMomHeight;
+  }
 
-    &::after {
-        content: "";
-        top: -$heartMomHeight;
-        right: -0.5 * $heartMomHeight;
-    }
+  &::after {
+    content: "";
+    top: -$heartMomHeight;
+    right: -0.5 * $heartMomHeight;
+  }
 }
 
 .baby {
-    height: $heartBabyHeight;
-    width: $heartBabyHeight;
-    margin: 0 (0.5 * $heartDadHeight);
+  height: $heartBabyHeight;
+  width: $heartBabyHeight;
+  margin: 0 (0.5 * $heartDadHeight);
+  animation-name: baby-jumping;
+  animation-duration: 2.5s;
+  animation-delay: 1s;
+  animation-iteration-count: infinite;
+  // animation-timing-function: ease-in-out;
+  animation-timing-function: cubic-bezier(0.645, 0.045, 0.355, 1);
+  position: relative;
 
-    &::before {
-        top: -0.5 * $heartBabyHeight;
-    }
+  &::before {
+    top: -0.5 * $heartBabyHeight;
+  }
 
-    &::after {
-        content: "";
-        top: -$heartBabyHeight;
-        right: -0.5 * $heartBabyHeight;
-    }
+  &::after {
+    content: "";
+    top: -$heartBabyHeight;
+    right: -0.5 * $heartBabyHeight;
+  }
+}
+
+@keyframes baby-jumping {
+  0% {
+    top: 0;
+    transform: rotate(-45deg);
+  }
+  25% {
+    top: -100px;
+    transform: rotate(-70deg);
+  }
+  50% {
+    top: 0;
+    transform: rotate(-45deg);
+  }
+  75% {
+    top: -100px;
+    transform: rotate(-20deg);
+  }
+  100% {
+    top: 0;
+    transform: rotate(-45deg);
+  }
 }

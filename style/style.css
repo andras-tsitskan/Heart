@@ -1,4 +1,5 @@
-html, body {
+html,
+body {
   height: 100%;
 }
 
@@ -13,7 +14,7 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background: lightcoral;
+  background: rgba(240, 127, 127, 0.6);
 }
 
 .heart {
@@ -43,48 +44,115 @@ body {
 }
 
 .dad {
-  height: 30vh;
-  width: 30vh;
+  height: 20vw;
+  width: 20vw;
 }
 
 .dad::before {
-  top: -15vh;
+  top: -10vw;
 }
 
 .dad::after {
   content: "";
-  top: -30vh;
-  right: -15vh;
+  top: -20vw;
+  right: -10vw;
 }
 
 .mom {
-  height: 25vh;
-  width: 25vh;
+  height: 15vw;
+  width: 15vw;
 }
 
 .mom::before {
-  top: -12.5vh;
+  top: -7.5vw;
 }
 
 .mom::after {
   content: "";
-  top: -25vh;
-  right: -12.5vh;
+  top: -15vw;
+  right: -7.5vw;
 }
 
 .baby {
-  height: 10vh;
-  width: 10vh;
-  margin: 0 15vh;
+  height: 5vw;
+  width: 5vw;
+  margin: 0 10vw;
+  -webkit-animation-name: baby-jumping;
+          animation-name: baby-jumping;
+  -webkit-animation-duration: 2.5s;
+          animation-duration: 2.5s;
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-timing-function: cubic-bezier(0.645, 0.045, 0.355, 1);
+          animation-timing-function: cubic-bezier(0.645, 0.045, 0.355, 1);
+  position: relative;
 }
 
 .baby::before {
-  top: -5vh;
+  top: -2.5vw;
 }
 
 .baby::after {
   content: "";
-  top: -10vh;
-  right: -5vh;
+  top: -5vw;
+  right: -2.5vw;
+}
+
+@-webkit-keyframes baby-jumping {
+  0% {
+    top: 0;
+    -webkit-transform: rotate(-45deg);
+            transform: rotate(-45deg);
+  }
+  25% {
+    top: -100px;
+    -webkit-transform: rotate(-70deg);
+            transform: rotate(-70deg);
+  }
+  50% {
+    top: 0;
+    -webkit-transform: rotate(-45deg);
+            transform: rotate(-45deg);
+  }
+  75% {
+    top: -100px;
+    -webkit-transform: rotate(-20deg);
+            transform: rotate(-20deg);
+  }
+  100% {
+    top: 0;
+    -webkit-transform: rotate(-45deg);
+            transform: rotate(-45deg);
+  }
+}
+
+@keyframes baby-jumping {
+  0% {
+    top: 0;
+    -webkit-transform: rotate(-45deg);
+            transform: rotate(-45deg);
+  }
+  25% {
+    top: -100px;
+    -webkit-transform: rotate(-70deg);
+            transform: rotate(-70deg);
+  }
+  50% {
+    top: 0;
+    -webkit-transform: rotate(-45deg);
+            transform: rotate(-45deg);
+  }
+  75% {
+    top: -100px;
+    -webkit-transform: rotate(-20deg);
+            transform: rotate(-20deg);
+  }
+  100% {
+    top: 0;
+    -webkit-transform: rotate(-45deg);
+            transform: rotate(-45deg);
+  }
 }
 /*# sourceMappingURL=style.css.map */
