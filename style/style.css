@@ -5,24 +5,18 @@ body {
 
 body {
   margin: 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
+  padding: 0;
+  box-sizing: border-box;
+  background: hsla(0deg, 79%, 72%, 0.6);
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  background: rgba(240, 127, 127, 0.6);
+  justify-content: center;
+  align-items: center;
 }
 
 .heart {
   background: red;
-  -webkit-transform: rotate(-45deg);
-          transform: rotate(-45deg);
+  transform: rotate(-45deg);
 }
-
 .heart::before {
   content: "";
   display: block;
@@ -32,7 +26,6 @@ body {
   width: inherit;
   border-radius: 50%;
 }
-
 .heart::after {
   content: "";
   display: block;
@@ -47,11 +40,9 @@ body {
   height: 20vw;
   width: 20vw;
 }
-
 .dad::before {
   top: -10vw;
 }
-
 .dad::after {
   content: "";
   top: -20vw;
@@ -62,11 +53,9 @@ body {
   height: 15vw;
   width: 15vw;
 }
-
 .mom::before {
   top: -7.5vw;
 }
-
 .mom::after {
   content: "";
   top: -15vw;
@@ -76,24 +65,23 @@ body {
 .baby {
   height: 5vw;
   width: 5vw;
-  margin: 0 10vw;
+  margin-left: 10vw;
+  margin-right: 8.2vw;
   -webkit-animation-name: baby-jumping;
           animation-name: baby-jumping;
   -webkit-animation-duration: 2.5s;
           animation-duration: 2.5s;
-  -webkit-animation-delay: 1s;
-          animation-delay: 1s;
+  -webkit-animation-delay: 0.5s;
+          animation-delay: 0.5s;
   -webkit-animation-iteration-count: infinite;
           animation-iteration-count: infinite;
   -webkit-animation-timing-function: cubic-bezier(0.645, 0.045, 0.355, 1);
           animation-timing-function: cubic-bezier(0.645, 0.045, 0.355, 1);
   position: relative;
 }
-
 .baby::before {
   top: -2.5vw;
 }
-
 .baby::after {
   content: "";
   top: -5vw;
@@ -103,56 +91,45 @@ body {
 @-webkit-keyframes baby-jumping {
   0% {
     top: 0;
-    -webkit-transform: rotate(-45deg);
-            transform: rotate(-45deg);
+    transform: rotate(-45deg);
   }
   25% {
-    top: -100px;
-    -webkit-transform: rotate(-70deg);
-            transform: rotate(-70deg);
+    top: -15vw;
+    transform: rotate(-70deg);
   }
   50% {
     top: 0;
-    -webkit-transform: rotate(-45deg);
-            transform: rotate(-45deg);
+    transform: rotate(-45deg);
   }
   75% {
-    top: -100px;
-    -webkit-transform: rotate(-20deg);
-            transform: rotate(-20deg);
+    top: -15vw;
+    transform: rotate(-20deg);
   }
   100% {
     top: 0;
-    -webkit-transform: rotate(-45deg);
-            transform: rotate(-45deg);
+    transform: rotate(-45deg);
   }
 }
 
 @keyframes baby-jumping {
   0% {
     top: 0;
-    -webkit-transform: rotate(-45deg);
-            transform: rotate(-45deg);
+    transform: rotate(-45deg);
   }
   25% {
-    top: -100px;
-    -webkit-transform: rotate(-70deg);
-            transform: rotate(-70deg);
+    top: -15vw;
+    transform: rotate(-70deg);
   }
   50% {
     top: 0;
-    -webkit-transform: rotate(-45deg);
-            transform: rotate(-45deg);
+    transform: rotate(-45deg);
   }
   75% {
-    top: -100px;
-    -webkit-transform: rotate(-20deg);
-            transform: rotate(-20deg);
+    top: -15vw;
+    transform: rotate(-20deg);
   }
   100% {
     top: 0;
-    -webkit-transform: rotate(-45deg);
-            transform: rotate(-45deg);
+    transform: rotate(-45deg);
   }
-}
-/*# sourceMappingURL=style.css.map */
+}/*# sourceMappingURL=style.css.map */
